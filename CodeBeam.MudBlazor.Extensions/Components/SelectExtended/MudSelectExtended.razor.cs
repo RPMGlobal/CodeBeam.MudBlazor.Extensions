@@ -108,6 +108,13 @@ namespace MudExtensions
         public RenderFragment? ChildContent { get; set; }
 
         /// <summary>
+        /// Optional additional content to display above the list within the popover.
+        /// </summary>
+        [Parameter]
+        [Category(CategoryTypes.FormComponent.Appearance)]
+        public RenderFragment<MudSelectExtended<T>>? AdditionalContent { get; set; }
+
+        /// <summary>
         /// Optional presentation template for items
         /// </summary>
         [Parameter]
