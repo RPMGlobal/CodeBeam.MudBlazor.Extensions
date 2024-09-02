@@ -112,7 +112,7 @@ namespace MudExtensions
         /// </summary>
         [Parameter]
         [Category(CategoryTypes.FormComponent.Appearance)]
-        public RenderFragment<MudSelectExtended<T>>? AdditionalContent { get; set; }
+        public RenderFragment<MudSelectExtended<T>>? StaticContent { get; set; }
 
         /// <summary>
         /// Optional presentation template for items
