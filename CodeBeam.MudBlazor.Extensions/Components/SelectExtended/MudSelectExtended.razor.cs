@@ -115,6 +115,13 @@ namespace MudExtensions
         public RenderFragment<MudSelectExtended<T>>? StaticContent { get; set; }
 
         /// <summary>
+        /// Whether to show <see cref="StaticContent"/> at the bottom of the popover.
+        /// </summary>
+        [Parameter]
+        [Category(CategoryTypes.FormComponent.Appearance)]
+        public bool ShowStaticContentAtEnd { get; set; }
+
+        /// <summary>
         /// Optional presentation template for items
         /// </summary>
         [Parameter]

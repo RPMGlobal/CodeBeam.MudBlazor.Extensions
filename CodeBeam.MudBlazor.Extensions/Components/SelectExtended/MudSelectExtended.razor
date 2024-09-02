@@ -103,7 +103,7 @@
                     </MudInputExtended>
 
                     <MudPopover Open="@_isOpen" MaxHeight="@MaxHeight" AnchorOrigin="@AnchorOrigin" TransformOrigin="@TransformOrigin" Class="@PopoverClass" RelativeWidth="@RelativeWidth">
-                        @if (StaticContent != null)
+                        @if (StaticContent != null && !ShowStaticContentAtEnd)
                         {
                             @StaticContent(this)
                         }
@@ -118,6 +118,11 @@
                                 @ChildContent
                             </MudListExtended>
                         </CascadingValue>
+
+                        @if (StaticContent != null && ShowStaticContentAtEnd)
+                        {
+                            @StaticContent(this)
+                        }
                     </MudPopover>
                 </InputContent>
             </MudInputControl>
